@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/agent-matrix/.github/blob/main/profile/logo.png" alt="Agent-Matrix Logo" width="150">
+  <img src="https://github.com/agent-matrix/.github/blob/main/profile/logo.png" alt="Agent-Matrix Logo" width="500">
 </p>
 
 <h1 align="center">
