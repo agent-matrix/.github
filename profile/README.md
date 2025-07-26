@@ -11,54 +11,197 @@
   <a href="https://github.com/ruslanmv/agent-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue" alt="License"></a>
 </p>
 
-
+---
 
 ## 🤖 What is Agent-Matrix?
 
-Welcome to Agent-Matrix! This GitHub organization is a curated collection of enterprise-ready AI agents, specifically designed for seamless integration with **IBM WatsonX Orchestrate** and **MCP Gateway**.
+**Agent-Matrix** is a community and enterprise hub for **production-ready AI agents, tools, and MCP servers**. It brings together curated AI capabilities that integrate natively with:
 
-Every repository you find here is a functional, deployable agent created by the **[agent-generator](https://github.com/ruslanmv/agent-generator)** tool. Our mission is to provide powerful, out-of-the-box solutions that bridge the gap between custom Python tools and robust, enterprise-grade AI orchestration platforms.
+* **MCP Gateway** for centralized registration, discovery, and governance.
+* **IBM watsonx Orchestrate** via ready-to-import skills (e.g., `skill.yaml`).
+* The **agent-generator** toolchain, enabling **reuse-first** development and rapid composition.
 
-## ✨ The Core Capability: From Custom Tool to Enterprise Skill
+Every asset here is built or described with open manifest standards and is designed to be observable, governable, and easy to operate across teams and environments.
 
-The true power of the agents in this hub is their ability to transform standalone Python scripts into fully managed and orchestrated enterprise skills.
+---
 
-All agents here follow a specific, powerful pattern:
+## 🧭 Mission
 
-1.  **Import Custom Tools**: They are built to wrap around custom Python logic (e.g., a script for document processing, data analysis, or API interaction).
-2.  **Native MCP Gateway Integration**: Each agent exposes a standard `/invoke` endpoint via a built-in FastAPI server. This allows **MCP Gateway** to manage, monitor, and create dashboards for agent performance and usage out-of-the-box.
-3.  **Seamless WatsonX Orchestrate Import**: Each agent includes a pre-generated `skill.yaml` definition. This allows you to import the agent directly into your **WatsonX Orchestrate** environment as a new, native skill, ready to be used in complex automations.
+Turn custom Python logic and third-party services into **manageable, observable, and orchestratable enterprise AI skills**—with a frictionless path from prototype to production.
 
-This architecture means you can take any custom logic, use the generator to wrap it, and instantly have a manageable, observable, and orchestratable enterprise AI asset.
+---
 
-## 📂 What You'll Find Here
+## 🧩 Core building blocks
 
-Each repository in Agent-Matrix represents a unique agent designed for the WatsonX ecosystem. A typical repository includes:
+* **Matrix Hub** — a central, PyPI-like catalog and install service (FastAPI).
+  Search agents/tools/MCP servers, compute install plans, and register them with MCP Gateway automatically.
 
-* **WatsonX Orchestrate Ready**: A `skill.yaml` file for immediate, native import into your Orchestrate skill catalog.
-* **MCP Gateway Ready**: A built-in FastAPI server exposing a standard endpoint for instant management and dashboarding.
-* **Custom Tool Integration**: A clear structure, usually in a `/tools` directory, where the core Python logic lives, ready for your inspection and customization.
-* **A Detailed `README.md`**: Step-by-step instructions on how to configure, run, and import that specific agent.
-* **Full Configuration**: All necessary files like `requirements.txt`, `.env.template`, and `Dockerfile` for rapid deployment.
+* **Catalog (manifests)** — the community-curated index of agents, tools, and MCP servers (versioned, PR-friendly).
 
-##  guiding principles
+* **CLI & SDK** — a simple **`matrix`** CLI and **`matrix-python-sdk`** for programmatic search, show, install.
 
-* **Enterprise-Focused**: Our primary goal is to produce agents that solve real-world business problems within a robust, secure, and manageable enterprise framework.
-* **Seamless Integration**: We prioritize out-of-the-box compatibility. Agents are designed to work flawlessly with WatsonX Orchestrate and MCP Gateway with minimal configuration.
-* **Production-Ready**: These are not just prototypes. They are deployable artifacts with server endpoints and containerization support, built for stability and performance.
-* **Open & Extensible**: Every agent is a powerful foundation. We encourage you to fork these repositories, customize the core tools, and adapt them to your unique challenges.
+* **agent-generator integration** — a plugin that makes planning **reuse-first**; generate only when nothing suitable exists.
 
-## 🤝 How to Contribute
+---
 
-This organization is a showcase of generated artifacts. Therefore, the contribution model is unique:
+## 📚 What you’ll find here
 
-**To contribute to the Agent-Matrix ecosystem, please contribute directly to the `agent-generator` project.**
+* **Enterprise-ready agents** with:
 
-By improving the generator, you improve every agent that will ever be created. We welcome contributions of all kinds:
+  * A standard FastAPI `/invoke` (where applicable).
+  * Optional `skill.yaml` for watsonx Orchestrate import.
+  * Container images and/or Python packages for easy deployment.
+* **Tools & MCP servers** described by clear, versioned manifests.
+* **Reference infrastructure** (Docker Compose / Helm) to run Matrix Hub alongside MCP Gateway.
 
-* **[Submit an Issue](https://github.com/ruslanmv/agent-generator/issues)** to report a bug or suggest a new feature for the generator.
-* **[Open a Pull Request](https://github.com/ruslanmv/agent-generator/pulls)** to enhance the WatsonX templates, add new features, or improve the generation logic.
+---
+
+## 🛠️ Repository index
+
+> All repositories live under **`github.com/agent-matrix`**.
+
+* **Matrix Hub (service)** — `matrix-hub`
+  Central catalog API + installer + ingestor. Publishes Docker images.
+
+* **Python SDK** — `matrix-python-sdk`
+  Lightweight client for Matrix Hub API.
+
+* **CLI** — `matrix-cli`
+  Developer CLI (`matrix search`, `matrix install`, etc.).
+
+* **Agent-generator plugin** — `agent-generator-matrix`
+  Reuse-first planning for `agent-generator` with adapters/templates.
+
+* **Catalog (manifests)** — `catalog`
+  PR-friendly repository of `agents/`, `tools/`, and `mcp-servers/` manifests with an `index.json`.
+
+* **Infra** — `infra`
+  Dev/prod ops assets (Docker Compose, Helm charts).
+
+> Some repositories may be created or promoted over time as the ecosystem grows.
+
+---
+
+## 🧪 How it works (end-to-end)
+
+1. **Authoring**
+   Build or wrap logic as an agent/tool/MCP server; add a **manifest** to the catalog (via PR).
+
+2. **Ingestion**
+   Matrix Hub periodically pulls `index.json` and manifests, validates them, and updates the catalog.
+
+3. **Discovery**
+   Developers run:
+
+   ```bash
+   matrix search "summarize pdfs" --type agent
+   ```
+
+   or call the SDK from apps, planners, or CI.
+
+4. **Install & Register**
+
+   ```bash
+   matrix install agent:pdf-summarizer@1.4.2 --target ./apps/pdf-bot
+   ```
+
+   Matrix Hub executes the plan (pip/uv, docker, git), writes adapters, and **registers** with **MCP Gateway**.
+
+5. **Operate**
+   Your flows invoke registered tools/servers; MCP Gateway provides central visibility and policy.
+
+---
+
+## ⚡ Quick start
+
+**Run the platform (dev):**
+
+```bash
+# In agent-matrix/infra
+docker compose -f docker-compose.dev.yaml up -d
+```
+
+**Install the CLI (local):**
+
+```bash
+pipx install matrix-cli
+# or
+pip install matrix-cli
+```
+
+**Search, show, install:**
+
+```bash
+matrix search "summarize pdfs" --type agent
+matrix show agent:pdf-summarizer
+matrix install agent:pdf-summarizer@1.4.2 --target ./apps/pdf-bot
+```
+
+**Integrate with agent-generator:**
+
+```bash
+pip install agent-generator-matrix
+# planning_agent.py will consult Matrix Hub first (reuse-first)
+```
+
+---
+
+## 🧱 Repository anatomy (per agent/tool)
+
+Typical agent repository includes:
+
+* **FastAPI server** exposing `/invoke` (where applicable).
+* **Orchestrate skill** descriptor (`skill.yaml`) for direct import.
+* **Containerization** (`Dockerfile`) and/or **PyPI** packaging.
+* **Documentation** (`README.md`) with run/import/operate steps.
+* **Configuration** (`.env.template`, templates, adapter glue).
+
+---
+
+## 🧪 Quality, security & governance
+
+* **Open manifest schemas** with CI validation.
+* **License policy** (allowlist/denylist) and optional **signature/SBOM checks**.
+* **Auditability** via MCP Gateway registration history and Matrix Hub logs.
+* **RBAC & tenancy** planned; follow repo roadmaps for details.
+
+---
+
+## 🌍 Guiding principles
+
+* **Enterprise-focused** — solve real problems with reliability and scale in mind.
+* **Seamless integration** — first-class with MCP Gateway and watsonx Orchestrate.
+* **Production-ready** — observable, containerized, governed.
+* **Open & extensible** — manifests, adapters, and templates encourage forking and reuse.
+
+---
+
+## 🤝 How to contribute
+
+We welcome contributions across the stack:
+
+* **Catalog additions** — submit manifests via PRs to the **`catalog`** repo.
+* **Matrix Hub / CLI / SDK / Infra** — open issues and PRs in the respective repositories.
+* **Generator templates & flows** — contribute to **[`agent-generator`](https://github.com/ruslanmv/agent-generator)** to improve the entire ecosystem.
+
+Please follow repository-specific **CONTRIBUTING** guidelines and coding standards.
+
+---
 
 ## 📄 License
 
-All agent repositories within this organization are generated under the **Apache 2.0 License**, the same license as the `agent-generator` tool itself.
+All Agent-Matrix projects are released under the **Apache 2.0 License** unless noted otherwise. Individual agents/tools may include third-party dependencies with their own licenses—see each repository for details.
+
+---
+
+## 📫 Community & support
+
+* **Issues** — use the issue tracker of the relevant repository.
+* **Discussions** — GitHub Discussions (where enabled) for Q\&A and proposals.
+* **Security** — report vulnerabilities privately via repository security policy (SECURITY.md) if available.
+
+---
+
+### ⭐ Acknowledgments
+
+Agent-Matrix builds on open standards and tooling, with special thanks to the **agent-generator** project and the broader OSS community driving MCP and orchestration ecosystems forward.
