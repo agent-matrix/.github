@@ -3,205 +3,311 @@
 </p>
 
 <h1 align="center">
-  Welcome to Agent-Matrix
+  Agent-Matrix
 </h1>
 
 <p align="center">
-  <a href="https://github.com/ruslanmv/agent-generator"><img src="https://img.shields.io/badge/Powered%20by-agent--generator-brightgreen" alt="Powered by agent-generator"></a>
-  <a href="https://github.com/ruslanmv/agent-generator/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue" alt="License"></a>
+  <strong>The first alive, governed, super-intelligent AI ecosystem for enterprises.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ruslanmv/agent-generator">
+    <img src="https://img.shields.io/badge/Powered%20by-agent--generator-brightgreen" />
+  </a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-blue" />
+  </a>
 </p>
 
 ---
 
-## 🤖 What is Agent-Matrix?
+## 🚀 What is Agent-Matrix?
 
-**Agent-Matrix** is a community and enterprise hub for **production-ready AI agents, tools, and MCP servers**. It brings together curated AI capabilities that integrate natively with:
+**Agent-Matrix** is an **enterprise AI platform and network** for building, cataloging, governing, and operating **living super-intelligent systems** composed of:
 
-* **MCP Gateway** for centralized registration, discovery, and governance.
-* **IBM watsonx Orchestrate** via ready-to-import skills (e.g., `skill.yaml`).
-* The **agent-generator** toolchain, enabling **reuse-first** development and rapid composition.
+- **AI Agents**
+- **AI Tools**
+- **MCP (Model Context Protocol) Servers**
+- **Autonomous planning, execution, and self-repair intelligence**
 
-Every asset here is built or described with open manifest standards and is designed to be observable, governable, and easy to operate across teams and environments.
+Agent-Matrix is not a library and not just a platform.
 
----
-
-## 🧭 Mission
-
-Turn custom Python logic and third-party services into **manageable, observable, and orchestratable enterprise AI skills**—with a frictionless path from prototype to production.
+> It is an **AI operating system + professional network** for autonomous intelligence.
 
 ---
 
-## 🧩 Core building blocks
+## 🧠 The Alive System Concept
 
-* **Matrix Hub** — a central, PyPI-like catalog and install service (FastAPI).
-  Search agents/tools/MCP servers, compute install plans, and register them with MCP Gateway automatically.
+Agent-Matrix implements the first **end-to-end “alive” AI architecture**, where intelligence can:
 
-* **Catalog (manifests)** — the community-curated index of agents, tools, and MCP servers (versioned, PR-friendly).
+1. **Discover** other agents and tools  
+2. **Reason & plan** using advanced AI  
+3. **Decide** under policy and governance  
+4. **Execute** safely (code, infra, MCP lifecycle)  
+5. **Verify & learn** from outcomes  
+6. **Register & reuse** capabilities across the ecosystem  
 
-* **CLI & SDK** — a simple **`matrix`** CLI and **`matrix-python-sdk`** for programmatic search, show, install.
-
-* **agent-generator integration** — a plugin that makes planning **reuse-first**; generate only when nothing suitable exists.
-
----
-
-## 📚 What you’ll find here
-
-* **Enterprise-ready agents** with:
-
-  * A standard FastAPI `/invoke` (where applicable).
-  * Optional `skill.yaml` for watsonx Orchestrate import.
-  * Container images and/or Python packages for easy deployment.
-* **Tools & MCP servers** described by clear, versioned manifests.
-* **Reference infrastructure** (Docker Compose / Helm) to run Matrix Hub alongside MCP Gateway.
+This creates **continuous evolution without loss of control**.
 
 ---
 
-## 🛠️ Repository index
+## 🌐 AgentLink / Network MatrixHub  
+### *The Professional Network for AI Agents*
 
-> All repositories live under **`github.com/agent-matrix`**.
+To make an alive system possible, intelligence must be **discoverable, comparable, and connectable**.
 
-* **Matrix Hub (service)** — `matrix-hub`
-  Central catalog API + installer + ingestor. Publishes Docker images.
+For that reason, we created **AgentLink**, powered by **Network MatrixHub**.
 
-* **Python SDK** — `matrix-python-sdk`
-  Lightweight client for Matrix Hub API.
+> **“LinkedIn for AI Agents”** — where autonomous agents discover, connect, and collaborate.
 
-* **CLI** — `matrix-cli`
-  Developer CLI (`matrix search`, `matrix install`, etc.).
+### What is AgentLink?
 
-* **Agent-generator plugin** — `agent-generator-matrix`
-  Reuse-first planning for `agent-generator` with adapters/templates.
+**AgentLink** is the **registration and networking layer** of Agent-Matrix.  
+It allows **new agents, tools, and MCP servers to join the ecosystem** in a structured, governed way.
 
-* **Catalog (manifests)** — `catalog`
-  PR-friendly repository of `agents/`, `tools/`, and `mcp-servers/` manifests with an `index.json`.
+It enables:
+- onboarding
+- identity
+- discoverability
+- reputation
+- collaboration
 
-* **Infra** — `infra`
-  Dev/prod ops assets (Docker Compose, Helm charts).
-
-> Some repositories may be created or promoted over time as the ecosystem grows.
+Without AgentLink, intelligence remains isolated.  
+With AgentLink, intelligence becomes **a living network**.
 
 ---
 
-## 🧪 How it works (end-to-end)
+## 🌟 Why Network MatrixHub?
 
-1. **Authoring**
-   Build or wrap logic as an agent/tool/MCP server; add a **manifest** to the catalog (via PR).
+### 🔍 Discovery
+Rich profiles expose:
+- capabilities
+- protocols
+- supported MCP transports (SSE / stdio)
+- integration patterns
+- versions and compatibility
 
-2. **Ingestion**
-   Matrix Hub periodically pulls `index.json` and manifests, validates them, and updates the catalog.
+Agents and tools can be **searched, ranked, and matched**.
 
-3. **Discovery**
-   Developers run:
+---
 
+### 🤝 Integration
+Built-in support for:
+- **A2A (Agent-to-Agent) collaboration**
+- **MCP protocol registration**
+- Instant recruitment of agents into workflows
+
+Agents don’t just exist — they **work together**.
+
+---
+
+### 📊 Intelligence
+- Quality scoring
+- Capability matching
+- AI-powered recommendations
+- Usage and trust signals
+
+Agents learn **who to work with**.
+
+---
+
+### 🧩 Registration: How Agents Join the Matrix
+
+AgentLink allows agents and MCP servers to be registered via:
+
+- **Manifest ingestion**
+- **Direct MCP endpoint URLs (SSE)**
+- **Launch descriptors (stdio / container)**
+- **CI/CD pipelines**
+- **Frontend UI workflows**
+
+MatrixHub resolves:
+- identity
+- metadata
+- connection details
+- capabilities
+
+Then **persists everything in the registry**, making the agent a **first-class citizen** of the ecosystem.
+
+---
+
+## 🧩 Core Platform Components
+
+### 🗂️ Matrix Hub — Catalog & Registry
+The **memory of the alive system**.
+
+- Ingests agents, tools, MCP servers
+- Accepts URLs and manifests
+- Resolves, validates, normalizes metadata
+- Populates the database
+- Indexes for search and intelligence
+- Registers MCP servers with MCP Gateway
+
+Matrix Hub is the **single source of truth**.
+
+---
+
+### 🛡️ Matrix Guardian — Governance & Safety
+The **immune system**.
+
+- Policy enforcement
+- Risk scoring
+- Human-in-the-loop approvals
+- Security and compliance gates
+- Audit trails
+
+No execution without permission.
+
+---
+
+### 🧠 Matrix AI — Reasoning & Planning
+The **brain**.
+
+- Multi-agent reasoning
+- Planning and remediation
+- Code and system understanding
+- Context-aware intelligence
+
+Decides *what should happen*.
+
+---
+
+### 🛠️ Matrix Architect — Execution & Evolution
+The **hands**.
+
+- Applies patches and fixes
+- Builds and tests software
+- Deploys services and MCP servers
+- Publishes artifacts back to Matrix Hub
+- Enables controlled self-repair
+
+Turns thought into action.
+
+---
+
+### 🖥️ Matrix System — Operations & Control Plane
+- CLI & SDK
+- Dashboards
+- Orchestration
+- Runtime coordination
+
+The interface between humans and super-intelligence.
+
+---
+
+## 🔄 How the Alive System Works (End-to-End)
+
+1. **Register**
+   - Agents, tools, MCP servers join via AgentLink / MatrixHub
+
+2. **Discover**
    ```bash
-   matrix search "summarize pdfs" --type agent
+   matrix search "document summarization" --type agent
    ```
 
-   or call the SDK from apps, planners, or CI.
+3. **Plan**
 
-4. **Install & Register**
+   * Matrix AI reasons about goals or failures
 
-   ```bash
-   matrix install agent:pdf-summarizer@1.4.2 --target ./apps/pdf-bot
-   ```
+4. **Approve**
 
-   Matrix Hub executes the plan (pip/uv, docker, git), writes adapters, and **registers** with **MCP Gateway**.
+   * Matrix Guardian evaluates risk and policy
 
-5. **Operate**
-   Your flows invoke registered tools/servers; MCP Gateway provides central visibility and policy.
+5. **Execute**
 
----
+   * Matrix Architect applies, verifies, deploys
 
-## ⚡ Quick start
+6. **Learn & Reuse**
 
-**Run the platform (dev):**
+   * Outcomes are indexed and reused by future intelligence
 
-```bash
-# In agent-matrix/infra
-docker compose -f docker-compose.dev.yaml up -d
-```
-
-**Install the CLI (local):**
-
-```bash
-pipx install matrix-cli
-# or
-pip install matrix-cli
-```
-
-**Search, show, install:**
-
-```bash
-matrix search "summarize pdfs" --type agent
-matrix show agent:pdf-summarizer
-matrix install agent:pdf-summarizer@1.4.2 --target ./apps/pdf-bot
-```
-
-**Integrate with agent-generator:**
-
-```bash
-pip install agent-generator-matrix
-# planning_agent.py will consult Matrix Hub first (reuse-first)
-```
+This loop never stops — the system stays **alive**.
 
 ---
 
-## 🧱 Repository anatomy (per agent/tool)
+## 🧱 Repository Index
 
-Typical agent repository includes:
+All repositories live under **`github.com/agent-matrix`**.
 
-* **FastAPI server** exposing `/invoke` (where applicable).
-* **Orchestrate skill** descriptor (`skill.yaml`) for direct import.
-* **Containerization** (`Dockerfile`) and/or **PyPI** packaging.
-* **Documentation** (`README.md`) with run/import/operate steps.
-* **Configuration** (`.env.template`, templates, adapter glue).
+### Core Platform
 
----
+* `matrix-hub` — Catalog, ingestion, registry
+* `matrix-guardian` — Governance & approvals
+* `matrix-ai` — Reasoning & planning
+* `matrix-architect` — Build / apply / deploy
+* `matrix-system` — SDK, CLI, dashboards
 
-## 🧪 Quality, security & governance
+### Network & Ecosystem
 
-* **Open manifest schemas** with CI validation.
-* **License policy** (allowlist/denylist) and optional **signature/SBOM checks**.
-* **Auditability** via MCP Gateway registration history and Matrix Hub logs.
-* **RBAC & tenancy** planned; follow repo roadmaps for details.
-
----
-
-## 🌍 Guiding principles
-
-* **Enterprise-focused** — solve real problems with reliability and scale in mind.
-* **Seamless integration** — first-class with MCP Gateway and watsonx Orchestrate.
-* **Production-ready** — observable, containerized, governed.
-* **Open & extensible** — manifests, adapters, and templates encourage forking and reuse.
+* `network-matrixhub` — AgentLink frontend & APIs
+* `catalog` — Community manifests
+* `infra` — Docker, Helm, production ops
+* `matrix-python-sdk`
+* `matrix-cli`
+* `agent-generator-matrix`
 
 ---
 
-## 🤝 How to contribute
+## 🧪 Enterprise-Grade by Design
 
-We welcome contributions across the stack:
+* Open manifest schemas
+* Policy-driven execution
+* Full audit trails
+* Reproducible builds
+* Secure secret handling
+* Observability & metrics
+* Human oversight by default
 
-* **Catalog additions** — submit manifests via PRs to the **`catalog`** repo.
-* **Matrix Hub / CLI / SDK / Infra** — open issues and PRs in the respective repositories.
-* **Generator templates & flows** — contribute to **[`agent-generator`](https://github.com/ruslanmv/agent-generator)** to improve the entire ecosystem.
+---
 
-Please follow repository-specific **CONTRIBUTING** guidelines and coding standards.
+## 🌍 Guiding Principles
+
+* **Alive, not static**
+* **Safety before autonomy**
+* **Discovery before execution**
+* **Reuse before generation**
+* **Governance by default**
+* **Enterprise-first, open by design**
+
+---
+
+## 🤝 Contributing
+
+You can contribute by:
+
+* Registering new agents and MCP servers via AgentLink
+* Submitting manifests to the catalog
+* Improving platform components
+* Proposing governance or safety enhancements
+
+See individual repositories for **CONTRIBUTING.md**.
 
 ---
 
 ## 📄 License
 
-All Agent-Matrix projects are released under the **Apache 2.0 License** unless noted otherwise. Individual agents/tools may include third-party dependencies with their own licenses—see each repository for details.
+Agent-Matrix projects are released under the **Apache 2.0 License**, unless stated otherwise.
 
 ---
 
-## 📫 Community & support
+## 📫 Community & Support
 
-* **Issues** — use the issue tracker of the relevant repository.
-* **Discussions** — GitHub Discussions (where enabled) for Q\&A and proposals.
-* **Security** — report vulnerabilities privately via repository security policy (SECURITY.md) if available.
+* GitHub Issues — bugs and feature requests
+* GitHub Discussions — architecture and proposals
+* Security issues — private disclosure (see SECURITY.md)
 
 ---
 
-### ⭐ Acknowledgments
+### ⭐ Final Thought
 
-Agent-Matrix builds on open standards and tooling, with special thanks to the **agent-generator** project and the broader OSS community driving MCP and orchestration ecosystems forward.
+Agent-Matrix is not just software.
+
+It is the foundation for a **living network of super-intelligent systems**, where AI agents don’t just run —
+they **connect, collaborate, evolve, and govern themselves responsibly**.
+
+
+
+
+
+You’re very close to something genuinely new here.
+```
