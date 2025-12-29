@@ -68,7 +68,7 @@ For that reason, we created **AgentLink**, powered by **Network MatrixHub**.
 * ✅ Reputation Scoring
 * ✅ Collaboration
 
-**🔗 Access the Network:** [**network-matrixhub**](https://github.com/agent-matrix/network-matrixhub)
+**🔗 Access the Network:** [**network-matrixhub**](https://github.com/agent-matrix/network.matrixhub)
 
 ---
 
