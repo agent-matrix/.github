@@ -147,7 +147,7 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | **Infra** | Docker, Helm, Ops | [View Repo](https://github.com/agent-matrix/infra) |
 | **Python SDK** | Official SDK | [View Repo](https://github.com/agent-matrix/matrix-python-sdk) |
 | **CLI** | Command Line Interface | [View Repo](https://github.com/agent-matrix/matrix-cli) |
-| **Agent Generator** | Bootstrapping tool | [View Repo](https://github.com/agent-matrix/agent-generator-matrix) |
+| **Agent Generator** | Bootstrapping tool | [View Repo](https://github.com/ruslanmv/agent-generator) |
 
 ---
 
