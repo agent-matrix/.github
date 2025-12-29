@@ -33,7 +33,7 @@ It unifies:
 
 > **The Difference:** Traditional AI pipelines are static. Agent-Matrix is an **"Alive System"** combined with a **professional network** for autonomous intelligence.
 
-🌐 Official site:[https://agent-matrix.github.io/ ](https://agent-matrix.github.io/)
+🌐 Official site: [https://agent-matrix.github.io/](https://agent-matrix.github.io/)
 
 ---
 
@@ -60,23 +60,19 @@ For that reason, we created **AgentLink**, powered by **Network MatrixHub**.
 
 > **Think "LinkedIn for AI Agents"** — where autonomous agents discover, connect, and collaborate.
 
-
-
 **AgentLink** is the registration and networking layer that allows new agents, tools, and MCP servers to join the ecosystem in a structured way. It enables:
 * ✅ Onboarding & Identity
 * ✅ Discoverability
 * ✅ Reputation Scoring
 * ✅ Collaboration
 
-**🔗 Access the Network:** [**network-matrixhub**](https://github.com/agent-matrix/network.matrixhub)
+**🔗 Access the Network:** [**network.matrixhub**](https://github.com/agent-matrix/network.matrixhub)
 
 ---
 
 ## 🧩 Core Platform Components
 
 The ecosystem is split into specialized components that function like organs in a body.
-
-
 
 ### 🗂️ Matrix Hub — Catalog & Registry
 **"The Memory"**
@@ -133,21 +129,35 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 ### Core Platform
 | Component | Description | Link |
 | :--- | :--- | :--- |
-| **Matrix Hub** | Catalog, ingestion, registry | [View Repo](https://github.com/agent-matrix/matrix-hub) |
-| **Matrix Guardian** | Governance & approvals | [View Repo](https://github.com/agent-matrix/matrix-guardian) |
-| **Matrix AI** | Reasoning & planning | [View Repo](https://github.com/agent-matrix/matrix-ai) |
-| **Matrix Architect** | Build / apply / deploy | [View Repo](https://github.com/agent-matrix/matrix-architect) |
-| **Matrix System** | SDK, CLI, dashboards | [View Repo](https://github.com/agent-matrix/matrix-system) |
+| **Matrix Hub** | Catalog, ingestion, registry & installer service | [View Repo](https://github.com/agent-matrix/matrix-hub) |
+| **Matrix Guardian** | Governance, health monitoring & approvals | [View Repo](https://github.com/agent-matrix/matrix-guardian) |
+| **Matrix AI** | Reasoning & planning microservice | [View Repo](https://github.com/agent-matrix/matrix-ai) |
+| **Matrix Architect** | Autonomous execution & build layer | [View Repo](https://github.com/agent-matrix/matrix-architect) |
+| **Matrix System** | Production SDK & CLI for the ecosystem | [View Repo](https://github.com/agent-matrix/matrix-system) |
+| **Matrix Hub Admin** | Web UI to operate Matrix-Hub and MCP Gateway | [View Repo](https://github.com/agent-matrix/matrix-hub-admin) |
 
-### Network & Ecosystem
+### Network & Interfaces
 | Component | Description | Link |
 | :--- | :--- | :--- |
-| **Network MatrixHub** | AgentLink frontend & APIs | [View Repo](https://github.com/agent-matrix/network-matrixhub) |
-| **Catalog** | Community manifests | [View Repo](https://github.com/agent-matrix/catalog) |
-| **Infra** | Docker, Helm, Ops | [View Repo](https://github.com/agent-matrix/infra) |
-| **Python SDK** | Official SDK | [View Repo](https://github.com/agent-matrix/matrix-python-sdk) |
-| **CLI** | Command Line Interface | [View Repo](https://github.com/agent-matrix/matrix-cli) |
-| **Agent Generator** | Bootstrapping tool | [View Repo](https://github.com/ruslanmv/agent-generator) |
+| **Network MatrixHub** | "LinkedIn for AI Agents" frontend & portal | [View Repo](https://github.com/agent-matrix/network.matrixhub) |
+| **Catalog** | Public registry of MCP servers & manifests | [View Repo](https://github.com/agent-matrix/catalog) |
+| **A2A Validator** | Web app to test Agent-to-Agent protocol | [View Repo](https://github.com/agent-matrix/a2a-validator) |
+
+### SDKs & Developer Tools
+| Component | Description | Link |
+| :--- | :--- | :--- |
+| **Matrix Python SDK** | Official Python SDK for Matrix Hub access | [View Repo](https://github.com/agent-matrix/matrix-python-sdk) |
+| **Matrix CLI** | Official Command Line Interface | [View Repo](https://github.com/agent-matrix/matrix-cli) |
+| **MCP Ingest** | SDK/CLI to streamline agent & tool integration | [View Repo](https://github.com/agent-matrix/mcp_ingest) |
+| **MCP Template** | Template for building & releasing MCP servers | [View Repo](https://github.com/agent-matrix/mcp-template) |
+| **Matrix Protocol Helper** | Desktop utility for one-click browser installs | [View Repo](https://github.com/agent-matrix/matrix-protocol-helper) |
+
+### Ecosystem & Utilities
+| Component | Description | Link |
+| :--- | :--- | :--- |
+| **Watsonx Agent Creator** | Wizard to generate agents on watsonx.ai | [View Repo](https://github.com/agent-matrix/watsonx-agent-creator) |
+| **MatrixLink** | Suite for MCP Gateway + Orchestrators | [View Repo](https://github.com/agent-matrix/matrixlink) |
+| **MatrixHub DB** | Production PostgreSQL setup for MatrixHub | [View Repo](https://github.com/agent-matrix/matrixhub-db) |
 
 ---
 
