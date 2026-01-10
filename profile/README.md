@@ -276,7 +276,7 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | **Watsonx Agent Creator** | Wizard to generate agents on watsonx.ai | [View Repo](https://github.com/agent-matrix/watsonx-agent-creator) |
 | **MatrixLink** | Suite for MCP Gateway + Orchestrators | [View Repo](https://github.com/agent-matrix/matrixlink) |
 | **MatrixHub DB** | Production PostgreSQL setup for MatrixHub | [View Repo](https://github.com/agent-matrix/matrixhub-db) |
-
+| **Matrix-Infra** | Infrastructure reference for deploying and operating Agent-Matrix services across Kubernetes and cloud environments | [View Repo](https://github.com/agent-matrix/matrix-infra)
 ---
 
 ## 🧪 Enterprise-Grade by Design
