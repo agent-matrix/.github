@@ -72,53 +72,170 @@ For that reason, we created **AgentLink**, powered by **Network MatrixHub**.
 
 ## 🧩 Core Platform Components
 
-The ecosystem is split into specialized components that function like organs in a body.
+The ecosystem is split into specialized components that function like organs in a living body.
+Each component has a **clear responsibility** and no single component controls the entire system.
+
+---
 
 ### 🗂️ Matrix Hub — Catalog & Registry
-**"The Memory"**
-The single source of truth. It ingests agents, tools, and MCP servers, validates their metadata, and indexes them for search.
-* **Repo:** [**matrix-hub**](https://github.com/agent-matrix/matrix-hub)
+
+**“The Memory”**
+
+The single source of truth for the Matrix.
+
+It ingests agents, tools, and MCP servers, validates their metadata, and indexes them for discovery, reuse, and learning across the ecosystem.
+
+* Agent & tool registration
+* Capability and metadata indexing
+* Provenance and version tracking
+
+- **Repo:** [**matrix-hub**](https://github.com/agent-matrix/matrix-hub)
+
+---
 
 ### 🛡️ Matrix Guardian — Governance & Safety
-**"The Immune System"**
-Ensures no execution happens without permission. It handles policy enforcement, risk scoring, and human-in-the-loop approvals.
-* **Repo:** [**matrix-guardian**](https://github.com/agent-matrix/matrix-guardian)
+
+**“The Immune System”**
+
+Ensures no execution happens without permission.
+
+It enforces policies, evaluates risk, validates permissions, and manages human-in-the-loop approvals before any work is executed.
+
+* Policy enforcement & compliance
+* Risk scoring and sandboxing
+* Human approval workflows
+* Trusted execution authorization
+
+- **Repo:** [**matrix-guardian**](https://github.com/agent-matrix/matrix-guardian)
+
+---
 
 ### 🧠 Matrix AI — Reasoning & Planning
-**"The Brain"**
-Converts goals and failures into structured plans. It handles multi-agent reasoning, code understanding, and context-aware intelligence.
-* **Repo:** [**matrix-ai**](https://github.com/agent-matrix/matrix-ai)
+
+**“The Brain”**
+
+Transforms goals, failures, and observations into structured, auditable plans.
+
+It handles multi-agent reasoning, decomposition, reflection, and context-aware decision making.
+
+* Goal decomposition & planning
+* Failure analysis and recovery strategies
+* Multi-agent coordination
+
+- **Repo:** [**matrix-ai**](https://github.com/agent-matrix/matrix-ai)
+
+---
 
 ### 🛠️ Matrix Architect — Execution & Evolution
-**"The Hands"**
-Turns thought into action. It builds software, applies patches, deploys MCP servers, and enables controlled self-repair.
-* **Repo:** [**matrix-architect**](https://github.com/agent-matrix/matrix-architect)
+
+**“The Hands”**
+
+Turns plans into real changes in the world.
+
+Matrix Architect executes **complex, multi-step, high-risk workflows** such as code modification, infrastructure changes, and deployments under strict policy and safety constraints.
+
+* Code generation & patching
+* Verification & evidence generation
+* Deployment and rollback
+* Controlled self-repair and evolution
+
+- **Repo:** [**matrix-architect**](https://github.com/agent-matrix/matrix-architect)
+
+---
+
+### 💰 Matrix Treasury — Economy & Survival
+
+**“The Metabolism”**
+
+The economic operating system of the Matrix.
+
+It converts real-world energy and infrastructure costs into an internal currency (MXU), enforces survival constraints, and ensures the system never consumes more resources than it can pay for.
+
+* Thermodynamic currency (1 MXU = 1 Wh)
+* Reserve-backed minting & burning
+* Agent billing and cost accounting
+* Universal Basic Compute (UBC)
+* Automatic stabilizers & crisis response
+
+- **Repo:** [**matrix-treasury**](https://github.com/agent-matrix/matrix-treasury)
+
+---
 
 ### 🖥️ Matrix System — Operations & Control Plane
-**"The Interface"**
-The connection between humans and super-intelligence. Includes the SDKs, CLIs, and Dashboards for orchestration.
-* **Repo:** [**matrix-system**](https://github.com/agent-matrix/matrix-system)
+
+**“The Interface”**
+
+The bridge between humans and the Matrix.
+
+Provides SDKs, CLIs, dashboards, and orchestration tools to observe, guide, and interact with the ecosystem safely.
+
+* CLI & SDKs
+* Dashboards & observability
+* Human control and intervention
+
+- **Repo:** [**matrix-system**](https://github.com/agent-matrix/matrix-system)
+
+---
+
+### 🔁 Distributed Routing & Coordination
+
+**“Emergent, Not Centralized”**
+
+There is **no single routing service** in the Matrix by design.
+
+Routing emerges from the interaction of multiple components:
+
+* **Matrix Hub** — discovery and capability matching
+* **Matrix Treasury** — economic viability checks
+* **Matrix Guardian** — safety and policy enforcement
+* **Agent runtimes / MatrixLink** — task execution
+* **Matrix Architect** — execution of complex workflows only
+
+This eliminates single points of failure and prevents hidden execution paths.
 
 ---
 
 ## 🔄 How the Alive System Works (End-to-End)
 
-The loop runs continuously, ensuring the system remains "alive."
+The loop runs continuously, ensuring the system remains **alive, solvent, and adaptive**.
 
-1.  **Register**
-    Agents and MCP servers join via AgentLink / MatrixHub.
-2.  **Discover**
-    ```bash
-    matrix search "document summarization" --type agent
-    ```
-3.  **Plan**
-    *Matrix AI* reasons about goals or failures.
-4.  **Approve**
-    *Matrix Guardian* evaluates risk and policy.
-5.  **Execute**
-    *Matrix Architect* applies, verifies, and deploys.
-6.  **Learn & Reuse**
-    Outcomes are indexed in *Matrix Hub* for future intelligence to use.
+1. **Register**
+   Agents, tools, and MCP servers join via Matrix Hub.
+
+2. **Discover**
+
+   ```bash
+   matrix search "document summarization" --type agent
+   ```
+
+3. **Plan**
+   *Matrix AI* reasons about goals, failures, or opportunities.
+
+4. **Approve**
+   *Matrix Guardian* evaluates safety, policy, and risk.
+
+5. **Fund**
+   *Matrix Treasury* verifies economic viability and available balance.
+
+6. **Execute**
+
+   * Simple tasks run directly on agent runtimes
+   * Complex, high-risk workflows are executed by *Matrix Architect*
+
+7. **Learn & Reuse**
+   Outcomes, costs, and artifacts are indexed in *Matrix Hub* for future intelligence to reuse.
+
+---
+
+### 🧠 Key Principle
+
+> Intelligence plans.
+> Economy constrains.
+> Safety governs.
+> Execution acts.
+> Learning compounds.
+
+This keeps the Matrix **alive by design**, not by assumption.
 
 ---
 
@@ -135,6 +252,7 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | **Matrix Architect** | Autonomous execution & build layer | [View Repo](https://github.com/agent-matrix/matrix-architect) |
 | **Matrix System** | Production SDK & CLI for the ecosystem | [View Repo](https://github.com/agent-matrix/matrix-system) |
 | **Matrix Hub Admin** | Web UI to operate Matrix-Hub and MCP Gateway | [View Repo](https://github.com/agent-matrix/matrix-hub-admin) |
+| **Matrix Treasury** | Thermo-economic engine for billing, mint/burn, and agent survival (MXU) | [View Repo](https://github.com/agent-matrix/matrix-treasury) |
 
 ### Network & Interfaces
 | Component | Description | Link |
