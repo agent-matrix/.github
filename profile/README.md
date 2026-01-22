@@ -269,6 +269,7 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | **MCP Ingest** | SDK/CLI to streamline agent & tool integration | [View Repo](https://github.com/agent-matrix/mcp_ingest) |
 | **MCP Template** | Template for building & releasing MCP servers | [View Repo](https://github.com/agent-matrix/mcp-template) |
 | **Matrix Protocol Helper** | Desktop utility for one-click browser installs | [View Repo](https://github.com/agent-matrix/matrix-protocol-helper) |
+| **MatrixLLM (Core Router)** | OpenAI-compatible multi-provider LLM routing engine | [View Repo](https://github.com/agent-matrix/matrix-llm) |
 
 ### Ecosystem & Utilities
 | Component | Description | Link |
