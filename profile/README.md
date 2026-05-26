@@ -20,7 +20,7 @@
 </p>
 
 ---
-
+![](agent-matrix-architecture.svg)
 ## 🚀 What is Agent-Matrix?
 
 **Agent-Matrix** is not just a library or a static platform. It is an **enterprise AI operating system and professional network** designed to build, catalog, govern, and operate **living super-intelligent systems**.
