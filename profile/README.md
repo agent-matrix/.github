@@ -36,7 +36,7 @@ It unifies:
 🌐 Official site: [https://agent-matrix.github.io/](https://agent-matrix.github.io/)
 
 ---
-![https://agent-matrix.github.io/](agent-matrix-architecture.svg)
+[![Agent Matrix architecture](agent-matrix-architecture.svg)](https://agent-matrix.github.io/)
 ## 🧠 The Alive System Concept
 
 We implement the first **end-to-end "alive" AI architecture**. In this system, intelligence isn't just triggered; it exists in a continuous loop where it can:
