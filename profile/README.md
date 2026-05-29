@@ -23,17 +23,24 @@
 
 ## 🚀 What is Agent-Matrix?
 
-**Agent-Matrix** is not just a library or a static platform. It is an **enterprise AI operating system and professional network** designed to build, catalog, govern, and operate **living super-intelligent systems**.
+**Agent-Matrix** is the foundation for building and operating enterprise-grade AI systems across the MatrixHub ecosystem.
+
+It is not just a library or a static platform. It is an **enterprise AI operating system and professional network** designed to build, catalog, govern, and operate living intelligent systems.
 
 It unifies:
+
 * **AI Agents**
 * **AI Tools**
-* **MCP (Model Context Protocol) Servers**
-* **Autonomous reasoning, execution, and self-repair intelligence**
+* **MCP Servers**
+* **Governance, orchestration, and secure execution**
+* **Autonomous reasoning, recovery, and self-repair intelligence**
 
-> **The Difference:** Traditional AI pipelines are static. Agent-Matrix is an **"Alive System"** combined with a **professional network** for autonomous intelligence.
+> **The Difference:** Traditional AI pipelines are static. Agent-Matrix is an **"Alive System"**, governed intelligence layer connected to a professional AI infrastructure network.
 
-🌐 Official site: [https://agent-matrix.github.io/](https://agent-matrix.github.io/)
+🌐 **Official Platform:** [MatrixHub](https://www.matrixhub.io/)  
+📘 **Documentation:** [agent-matrix.github.io](https://agent-matrix.github.io/)
+
+
 
 ---
 
