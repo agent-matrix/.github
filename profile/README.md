@@ -186,6 +186,25 @@ Provides SDKs, CLIs, dashboards, and orchestration tools to observe, guide, and 
 
 ---
 
+### ☁️ Matrix Cloud — Execution Plane & Operator Console
+
+**“The Muscles”**
+
+Where intelligence actually runs.
+
+**Matrix Cloud** (powered by **Matrix Runtime**) is the self-hostable **execution plane** of the Matrix. It runs MCP servers, agents, tools, short-lived sandboxes, and model jobs **inside your own infrastructure**, dialing **outbound-only** so secrets, internal APIs, and model access never leave. A single static binary ships the REST API, a premium enterprise **console**, the **MatrixShell** AI-assisted operator terminal, and a **multitenant** (SQLite) user store.
+
+* 10-minute MCP **sandboxes** — `initialize → tools/list → tools/call`, then auto-expire
+* Typed, TTL-bounded **jobs** streamed over Server-Sent Events
+* **Model inspection** with license/parameter resolution and runtime recommendation
+* **MatrixShell** — plain-English → command with low/medium/high risk and human confirmation
+* **Hybrid** execution (outbound-only) · modes: `cloud-worker`, `customer-agent`, `hf-space`, `local-dev`
+* **Multitenant** workspaces with PBKDF2-hashed accounts and sessions
+
+- **Repo:** [**matrix-runtime**](https://github.com/agent-matrix/matrix-runtime)
+
+---
+
 ### 🔁 Distributed Routing & Coordination
 
 **“Emergent, Not Centralized”**
@@ -262,6 +281,7 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | **Matrix System** | Production SDK & CLI for the ecosystem | [View Repo](https://github.com/agent-matrix/matrix-system) |
 | **Matrix Hub Admin** | Web UI to operate Matrix-Hub and MCP Gateway | [View Repo](https://github.com/agent-matrix/matrix-hub-admin) |
 | **Matrix Treasury** | Thermo-economic engine for billing, mint/burn, and agent survival (MXU) | [View Repo](https://github.com/agent-matrix/matrix-treasury) |
+| **Matrix Cloud (Runtime)** | Self-hostable execution plane: MCP sandboxes, MatrixShell, jobs, models & a multitenant console (single binary) | [View Repo](https://github.com/agent-matrix/matrix-runtime) |
 
 ### Network & Interfaces
 | Component | Description | Link |
@@ -275,6 +295,7 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | :--- | :--- | :--- |
 | **Matrix Python SDK** | Official Python SDK for Matrix Hub access | [View Repo](https://github.com/agent-matrix/matrix-python-sdk) |
 | **Matrix CLI** | Official Command Line Interface | [View Repo](https://github.com/agent-matrix/matrix-cli) |
+| **MatrixShell** | AI-assisted operator shell: natural-language → command with risk + confirmation | [View Repo](https://github.com/agent-matrix/MatrixShell) |
 | **MCP Ingest** | SDK/CLI to streamline agent & tool integration | [View Repo](https://github.com/agent-matrix/mcp_ingest) |
 | **MCP Template** | Template for building & releasing MCP servers | [View Repo](https://github.com/agent-matrix/mcp-template) |
 | **Matrix Protocol Helper** | Desktop utility for one-click browser installs | [View Repo](https://github.com/agent-matrix/matrix-protocol-helper) |
