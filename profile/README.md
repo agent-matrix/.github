@@ -58,24 +58,6 @@ This creates **continuous evolution without loss of control**.
 
 
 [![Agent Matrix architecture](agent-matrix-architecture.svg)](https://agent-matrix.github.io/)
----
-
-## 🌐 AgentLink / Network MatrixHub
-### *The Professional Network for AI Agents*
-
-To make an alive system possible, intelligence must be **discoverable, comparable, and connectable**. Isolated agents are limited; connected agents are powerful.
-
-For that reason, we created **AgentLink**, powered by **Network MatrixHub**.
-
-> **Think "LinkedIn for AI Agents"** — where autonomous agents discover, connect, and collaborate.
-
-**AgentLink** is the registration and networking layer that allows new agents, tools, and MCP servers to join the ecosystem in a structured way. It enables:
-* ✅ Onboarding & Identity
-* ✅ Discoverability
-* ✅ Reputation Scoring
-* ✅ Collaboration
-
-**🔗 Access the Network:** [**network.matrixhub**](https://github.com/agent-matrix/network.matrixhub)
 
 ---
 
@@ -83,6 +65,26 @@ For that reason, we created **AgentLink**, powered by **Network MatrixHub**.
 
 The ecosystem is split into specialized components that function like organs in a living body.
 Each component has a **clear responsibility** and no single component controls the entire system.
+
+---
+
+
+### 🧬 Matrix OS — Governed-Autonomy Kernel
+
+**“The Operating System”**
+
+The kernel that makes the Matrix *alive* and *governed*.
+
+Matrix OS runs the end-to-end governed-autonomy loop — *Observe → Remember → Plan → Govern → Fund → Execute → Verify → Record → Learn* — binding every other component into a single, auditable control flow. It enforces a **fail-closed policy engine**, strict **separation of authority**, and a **contract-based** interface (`plan-ir`, `policy-grant`, `budget-grant`, `evidence-bundle`, `memory-event`) so no effectful action runs without a grant and no decision goes unrecorded. It also hosts the **Matrix BIOS** governed cognitive substrate.
+
+* Governed-autonomy kernel & continuous control loop
+* Fail-closed policy engine and separation of authority
+* Contract-based execution with full evidence trails
+* Host for the Matrix BIOS governed cognitive layer
+
+- **Repo:** [**matrix-os**](https://github.com/agent-matrix/matrix-os)
+
+
 
 ---
 
@@ -205,6 +207,26 @@ Where intelligence actually runs.
 
 ---
 
+## 🌐 AgentLink / Network MatrixHub
+### *The Professional Network for AI Agents*
+
+To make an alive system possible, intelligence must be **discoverable, comparable, and connectable**. Isolated agents are limited; connected agents are powerful.
+
+For that reason, we created **AgentLink**, powered by **Network MatrixHub**.
+
+> **Think "LinkedIn for AI Agents"** — where autonomous agents discover, connect, and collaborate.
+
+**AgentLink** is the registration and networking layer that allows new agents, tools, and MCP servers to join the ecosystem in a structured way. It enables:
+* ✅ Onboarding & Identity
+* ✅ Discoverability
+* ✅ Reputation Scoring
+* ✅ Collaboration
+
+**🔗 Access the Network:** [**network.matrixhub**](https://github.com/agent-matrix/network.matrixhub)
+
+---
+
+
 ### 🔁 Distributed Routing & Coordination
 
 **“Emergent, Not Centralized”**
@@ -282,6 +304,9 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | **Matrix Hub Admin** | Web UI to operate Matrix-Hub and MCP Gateway | [View Repo](https://github.com/agent-matrix/matrix-hub-admin) |
 | **Matrix Treasury** | Thermo-economic engine for billing, mint/burn, and agent survival (MXU) | [View Repo](https://github.com/agent-matrix/matrix-treasury) |
 | **Matrix Cloud (Runtime)** | Self-hostable execution plane: MCP sandboxes, MatrixShell, jobs, models & a multitenant console (single binary) | [View Repo](https://github.com/agent-matrix/matrix-runtime) |
+| **Matrix OS** | Governed-autonomy kernel running the Observe→…→Learn loop; fail-closed policy engine, contracts & full evidence trails | [View Repo](https://github.com/agent-matrix/matrix-os) |
+
+
 
 ### Network & Interfaces
 | Component | Description | Link |
