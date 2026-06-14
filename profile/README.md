@@ -289,6 +289,14 @@ This keeps the Matrix **alive by design**, not by assumption.
 
 ---
 
+### 🏗️ Matrix Builder — Controlled AI Builds
+**“The Forge”**
+
+**Matrix Builder** is the human-and-AI entry point to the Matrix: it turns a plain-English idea into a *controlled, validated, versioned* software build — **giving AI coders a contract, not a prompt.** Instead of a one-shot generation you can't trust, it produces a signed **Matrix Bundle** (blueprint + locked standards + scoped tasks + per-coder prompts), hands the contract to any AI coder (Claude Code, Codex, Cursor, GitPilot, IBM Bob…), and **validates** the result against that contract — recording every accepted change as an immutable, versioned **Matrix Commit**. It's *Git for AI build contracts*: work locally and offline with the `mb` CLI, or in the cloud at **[build.matrixhub.io](https://build.matrixhub.io)**, then publish trusted bundles to MatrixHub — all powered by [agent-generator](https://github.com/ruslanmv/agent-generator) (the deterministic engine) under the signed [matrix-definitions](https://github.com/agent-matrix/matrix-definitions) standard. — **Repo:** [**matrix-builder**](https://github.com/agent-matrix/matrix-builder)
+
+
+---
+
 ## 🧱 Repository Index
 
 All repositories live under the [**Agent-Matrix Organization**](https://github.com/agent-matrix).
@@ -314,6 +322,9 @@ All repositories live under the [**Agent-Matrix Organization**](https://github.c
 | **Network MatrixHub** | "LinkedIn for AI Agents" frontend & portal | [View Repo](https://github.com/agent-matrix/network.matrixhub) |
 | **Catalog** | Public registry of MCP servers & manifests | [View Repo](https://github.com/agent-matrix/catalog) |
 | **A2A Validator** | Web app to test Agent-to-Agent protocol | [View Repo](https://github.com/agent-matrix/a2a-validator) |
+| **Matrix Builder** | Controlled AI builds — turn an idea into a validated, versioned Matrix Bundle ("Git for AI build contracts") | [View Repo](https://github.com/agent-matrix/matrix-builder) |
+
+
 
 ### SDKs & Developer Tools
 | Component | Description | Link |
